@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface PushNotificationData {
-    isSupported: boolean; // Added isSupported
+    isSupported: boolean;
     isSubscribed: boolean;
     subscribe: () => Promise<void>;
     unsubscribe: () => Promise<void>;
@@ -9,9 +9,15 @@ interface PushNotificationData {
 }
 
 function usePushNotification(): PushNotificationData {
+    const [isSupported, setIsSupported] = useState(false);
     const [isSubscribed, setIsSubscribed] = useState(false);
     const [subscription, setSubscription] = useState<PushSubscription | null>(null);
-    const isSupported = typeof window !== 'undefined' && 'serviceWorker' in navigator && 'PushManager' in window;
+
+    useEffect(() => {
+        if ('serviceWorker' in navigator && 'PushManager' in window) {
+            setIsSupported(true)
+        }
+    }, [])
 
     useEffect(() => {
         async function checkSubscription() {
