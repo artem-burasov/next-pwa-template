@@ -42,9 +42,9 @@ function InstallPrompt() {
 
     const handleInstall = async () => {
         if (installPrompt) {
-            // @ts-ignore
+            // @ts-expect-error: FIXME
             await installPrompt.prompt();
-            // @ts-ignore
+            // @ts-expect-error: FIXME
             const { outcome } = await installPrompt.userChoice;
             if (outcome === 'accepted') {
                 setIsInstalled(true);
