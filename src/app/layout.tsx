@@ -18,7 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: 'Next.js PWA',
-    description: 'A Progressive Web App built with Next.js'
+    description: 'A Progressive Web App built with Next.js',
+    manifest: '/manifest.webmanifest'
 }
 
 export default function RootLayout({
