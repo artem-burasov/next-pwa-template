@@ -1,6 +1,7 @@
 import QRCodeGenerator from '@/components/QRCodeGenerator';
 import InstallPrompt from '@/components/InstallPrompt';
 import PushSubscription from '@/components/PushSubscription';
+import ServiceWorkerUpdatePrompt from "@/components/ServiceWorkerUpdatePrompt";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         </div>
 
         <InstallPrompt />
+        <ServiceWorkerUpdatePrompt />
       </div>
   );
 }
