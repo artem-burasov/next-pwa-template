@@ -42,7 +42,7 @@ function ServiceWorkerUpdatePrompt() {
     }
 
     return (
-        <div className="fixed top-4 md:left-1/2 md:transform md:-translate-x-1/2 bg-white p-4 rounded shadow-lg flex flex-col items-center z-50">
+        <div className="fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 bg-white p-4 rounded shadow-lg flex flex-col items-center z-50">
             <p className="mb-2 text-center">New version of the application is available!</p>
             <Button onClick={handleUpdate}>Update now</Button>
         </div>
