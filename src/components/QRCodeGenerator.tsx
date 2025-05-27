@@ -50,7 +50,6 @@ function QRCodeGenerator() {
     const handleDeepLinkTest = () => {
         if (!validateURL(qrValue)) {
             setError('Please enter a valid URL');
-            setShowQR(false);
             return;
         }
 
