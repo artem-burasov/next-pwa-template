@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+
 import Button from '@/components/ui/Button';
 
 function InstallPrompt() {
@@ -55,11 +56,6 @@ function InstallPrompt() {
         }
     };
 
-    const handleOpen = () => {
-        // Redirect to PWA or main page (simplified)
-        window.location.href = '/';
-    };
-
     const handleClose = () => {
         // Hide banner and set expiration time (24 hours)
         const hideUntil = new Date().getTime() + 24 * 60 * 60 * 1000;
@@ -83,7 +79,6 @@ function InstallPrompt() {
             <p className="mb-2 text-center text-black">Install our app for a better experience!</p>
             <div className="flex space-x-4">
                 <Button onClick={handleInstall}>Install Now</Button>
-                <Button onClick={handleOpen}>Open</Button>
             </div>
         </div>
     );
