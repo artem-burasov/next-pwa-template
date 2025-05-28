@@ -55,10 +55,10 @@ function InstallPrompt() {
         }
     };
 
-    // const handleOpen = () => {
-    //     // Redirect to PWA or main page (simplified)
-    //     window.location.href = '/';
-    // };
+    const handleOpen = () => {
+        // Redirect to PWA or main page (simplified)
+        window.location.href = '/';
+    };
 
     const handleClose = () => {
         // Hide banner and set expiration time (24 hours)
@@ -85,9 +85,9 @@ function InstallPrompt() {
                 {installPrompt && (
                     <Button onClick={handleInstall}>Install Now</Button>
                 )}
-                {/*{isInstalled && (*/}
-                {/*    <Button onClick={handleOpen}>Открыть</Button>*/}
-                {/*)}*/}
+                {isInstalled && (
+                    <Button onClick={handleOpen}>Open</Button>
+                )}
             </div>
         </div>
     );
