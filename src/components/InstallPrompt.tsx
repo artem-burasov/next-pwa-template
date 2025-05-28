@@ -82,12 +82,8 @@ function InstallPrompt() {
             </button>
             <p className="mb-2 text-center text-black">Install our app for a better experience!</p>
             <div className="flex space-x-4">
-                {installPrompt && (
-                    <Button onClick={handleInstall}>Install Now</Button>
-                )}
-                {isInstalled && (
-                    <Button onClick={handleOpen}>Open</Button>
-                )}
+                <Button onClick={handleInstall}>Install Now</Button>
+                <Button onClick={handleOpen}>Open</Button>
             </div>
         </div>
     );
