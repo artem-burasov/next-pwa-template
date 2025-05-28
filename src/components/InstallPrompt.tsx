@@ -72,7 +72,7 @@ function InstallPrompt() {
     }
 
     return (
-        <div className="fixed top-4 left-4 right-4 bg-white p-4 rounded-lg shadow-lg flex flex-col items-center z-50">
+        <div className="fixed bottom-4 left-4 right-4 bg-white p-4 rounded-lg shadow-lg flex flex-col items-center z-50">
             <button
                 onClick={handleClose}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold"
@@ -80,10 +80,10 @@ function InstallPrompt() {
             >
                 ×
             </button>
-            <p className="mb-2 text-center text-black">Установите наше приложение для лучшего опыта!</p>
+            <p className="mb-2 text-center text-black">Install our app for a better experience!</p>
             <div className="flex space-x-4">
                 {installPrompt && (
-                    <Button onClick={handleInstall}>Установить</Button>
+                    <Button onClick={handleInstall}>Install Now</Button>
                 )}
                 {/*{isInstalled && (*/}
                 {/*    <Button onClick={handleOpen}>Открыть</Button>*/}
